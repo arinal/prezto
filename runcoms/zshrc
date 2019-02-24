@@ -12,7 +12,19 @@ fi
 
 # Customize to your needs...
 
+alias -g N="| /dev/null"
+alias -g G='| grep'
+alias -g L='| bat'
+alias -g J='| jq'
+alias -g T="| column -t -s $'\t'"
+
 alias tm='tmux'
 alias em='emacs -nw'
 alias emc='emacsclient -nw'
 alias f=ranger
+
+source ~/.local/bin/aws_zsh_completer.sh
+alias -g OT="--output table"
+
+export GOPATH=/home/archinal/sources/go/lib
+export PATH=$PATH:$GOPATH/bin
