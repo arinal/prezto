@@ -12,6 +12,9 @@ fi
 
 # Customize to your needs...
 
+alias -g P="| "
+alias -g PP="pbpaste | "
+alias -g C="| pbcopy"
 alias -g N="| /dev/null"
 alias -g G='| grep'
 alias -g L='| bat'
@@ -23,8 +26,8 @@ alias em='emacs -nw'
 alias emc='emacsclient -nw'
 alias f=ranger
 
+alias gtd='emacsclient -nw /home/archinal/Dropbox/Documents/orgs/TODO.org'
+
 source ~/.local/bin/aws_zsh_completer.sh
 alias -g OT="--output table"
 
-export GOPATH=/home/archinal/sources/go/lib
-export PATH=$PATH:$GOPATH/bin
