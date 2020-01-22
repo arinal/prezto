@@ -28,6 +28,6 @@ alias f=ranger
 
 alias gtd='emacsclient -nw /home/archinal/Dropbox/Documents/orgs/TODO.org'
 
-source ~/.local/bin/aws_zsh_completer.sh
-alias -g OT="--output table"
+# source ~/.local/bin/aws_zsh_completer.sh
+# alias -g OT="--output table"
 

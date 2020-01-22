@@ -6,9 +6,12 @@
 #
 
 export PATH=~/.local/bin:~/apps/bin:$PATH
+export TERMINAL=alacritty
 
-export GOPATH=/home/archinal/sources/go/lib
+export GOPATH=/home/arinal/sources/go/lib
 export PATH=$PATH:$GOPATH/bin
+
+export FZF_DEFAULT_COMMAND='rg --files'
 
 # Ensure that a non-login, non-interactive shell has a defined environment.
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then

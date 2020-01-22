@@ -63,3 +63,7 @@ if (( $#commands[(i)lesspipe(|.sh)] )); then
 fi
 
 xset r rate 200 30
+
+if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+  exec startx
+fi
