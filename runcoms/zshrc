@@ -24,10 +24,16 @@ alias -g T="| column -t -s $'\t'"
 alias tm='tmux'
 alias em='emacs -nw'
 alias emc='emacsclient -nw'
+alias e.='e .'
 alias f=ranger
 
 alias gtd='emacsclient -nw /home/archinal/Dropbox/Documents/orgs/TODO.org'
 
-# source ~/.local/bin/aws_zsh_completer.sh
-# alias -g OT="--output table"
+source awsp_functions.sh
+alias awsall="_awsListProfile"
+alias awsp="_awsSetProfile"
+alias awswho="aws configure list"
 
+source /usr/bin/aws_zsh_completer.sh
+
+pfetch

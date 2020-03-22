@@ -5,11 +5,17 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
-export PATH=~/.local/bin:~/apps/bin:$PATH
+export PATH=~/.local/bin:~/local/bin:$PATH
 export TERMINAL=alacritty
 
 export GOPATH=/home/arinal/sources/go/lib
 export PATH=$PATH:$GOPATH/bin
+
+export PATH=$PATH:/home/arinal/.gem/ruby/2.7.0/bin
+
+export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
+
+export R_LIBS_USER=/home/arinal/sources/R/lib
 
 export FZF_DEFAULT_COMMAND='rg --files'
 
