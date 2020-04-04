@@ -27,8 +27,6 @@ alias emc='emacsclient -nw'
 alias e.='e .'
 alias f=ranger
 
-alias gtd='emacsclient -nw /home/archinal/Dropbox/Documents/orgs/TODO.org'
-
 source awsp_functions.sh
 alias awsall="_awsListProfile"
 alias awsp="_awsSetProfile"
@@ -36,4 +34,15 @@ alias awswho="aws configure list"
 
 source /usr/bin/aws_zsh_completer.sh
 
-pfetch
+echo "\n"
+
+#catimg -w 70 /home/arinal/pictures/arch.png
+#echo "\n"
+#neofetch
+
+figlet -f 3d "Don't use" P lolcat
+echo "\n"
+figlet -f Bloody "mouse" P lolcat
+#figlet -f Elite "Don't use" P lolcat
+#figlet -f Banner3-D "mouse" P lolcat
+#figlet -f Impossible "mouse" P lolcat
