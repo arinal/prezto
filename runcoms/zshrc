@@ -10,6 +10,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+
 # Customize to your needs...
 
 alias -g P="| "
@@ -20,6 +21,13 @@ alias -g G='| grep'
 alias -g L='| bat'
 alias -g J='| jq'
 alias -g T="| column -t -s $'\t'"
+alias -g PF="| fzf"
+
+alias ls='lsd'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
 
 alias tm='tmux'
 alias em='emacs -nw'
@@ -32,7 +40,11 @@ alias awsall="_awsListProfile"
 alias awsp="_awsSetProfile"
 alias awswho="aws configure list"
 
-source /usr/bin/aws_zsh_completer.sh
+autoload -U +X bashcompinit && bashcompinit
+autoload -U +X compinit && compinit
+complete -C aws_completer aws
+
+source <(kubectl completion zsh)
 
 echo "\n"
 

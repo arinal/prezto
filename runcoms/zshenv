@@ -17,7 +17,9 @@ export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
 
 export R_LIBS_USER=/home/arinal/sources/R/lib
 
-export FZF_DEFAULT_COMMAND='rg --files'
+export FZF_DEFAULT_COMMAND='rg --files --hidden'
+export FZF_DEFAULT_OPTS='--preview "bat --style=numbers --color=always {}"'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Ensure that a non-login, non-interactive shell has a defined environment.
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
