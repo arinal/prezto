@@ -22,6 +22,14 @@ complete -C aws_completer aws
 
 source <(kubectl completion zsh)
 
+_dotnet_zsh_complete()
+{
+  local completions=("$(dotnet complete "$words")")
+  reply=( "${(ps:\n:)completions}" )
+}
+
+compctl -K _dotnet_zsh_complete dotnet
+
 alias -g P="| "
 alias -g PP="pbpaste | "
 alias -g C="| pbcopy"
